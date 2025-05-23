@@ -129,7 +129,7 @@ h1 {
     justify-content: center;
     gap: 30px;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0 auto 15px auto;
 }
 
 .fighter-card {
