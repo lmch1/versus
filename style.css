@@ -153,6 +153,7 @@ h1 {
     margin-bottom: 20px;
     border: 3px solid #FFD700;
     box-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
+    flex-shrink: 0;
 }
 
 .fighter-card h3 {
@@ -213,7 +214,7 @@ h1 {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    max-width: 700px;
+    max-width: 900px;
     margin: 0 auto;
     min-height: 350px;
 }
@@ -224,7 +225,7 @@ h1 {
     margin: 0 10px;
     min-height: 350px;
     width: auto;
-    max-width: 700px;
+    max-width: 900px;
 }
 
 .quote-card {
@@ -277,6 +278,7 @@ h1 {
     margin-bottom: 20px;
     border: 3px solid #ffcc00;
     box-shadow: 0 0 12px rgba(255, 204, 0, 0.6);
+    flex-shrink: 0;
 }
 
 .quote {
@@ -288,6 +290,7 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
+    min-width: 0;
 }
 
 .author {
@@ -401,11 +404,11 @@ h1 {
         margin: 15px 0;
     }
     .famous-quotes-section {
+        min-height: 450px;
         padding-top: 60px;
         padding-bottom: 80px;
         padding-left: 0;
         padding-right: 0;
-        min-height: 450px;
     }
     .quote-carousel-wrapper {
         width: 100%;
