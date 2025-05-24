@@ -186,7 +186,10 @@ h1 {
 .famous-quotes-section {
     position: relative;
     width: 100%;
-    padding: 60px 20px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
     background-color: rgba(0, 0, 0, 0.8);
     text-align: center;
     box-sizing: border-box;
@@ -194,7 +197,7 @@ h1 {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    min-height: 400px;
+    min-height: 500px;
     overflow: hidden;
 }
 
@@ -212,14 +215,14 @@ h1 {
     width: 100%;
     max-width: 700px;
     margin: 0 auto;
-    min-height: 250px;
+    min-height: 350px;
 }
 
 .quote-carousel {
     position: relative;
     flex-grow: 1;
     margin: 0 10px;
-    min-height: 250px;
+    min-height: 350px;
     width: auto;
     max-width: 700px;
 }
@@ -288,6 +291,7 @@ h1 {
     text-align: center;
     color: #ccc;
     margin-top: auto;
+    margin-bottom: 20px;
 }
 
 .prev-quote,
@@ -334,6 +338,7 @@ h1 {
         text-align: right;
         margin-top: 0;
         margin-left: auto;
+        margin-bottom: 20px;
     }
 }
 
@@ -391,16 +396,20 @@ h1 {
         margin: 15px 0;
     }
     .famous-quotes-section {
-        padding: 40px 0;
+        padding-top: 60px;
+        padding-bottom: 80px;
+        padding-left: 0;
+        padding-right: 0;
+        min-height: 450px;
     }
     .quote-carousel-wrapper {
         width: 100%;
         padding: 0 5px;
-        min-height: 250px;
+        min-height: 300px;
     }
     .quote-carousel {
         margin: 0 5px;
-        min-height: 250px;
+        min-height: 300px;
     }
     .quote-card {
         padding: 25px;
@@ -417,6 +426,7 @@ h1 {
     }
     .author {
         font-size: 1.05em;
+        margin-bottom: 15px;
     }
     .prev-quote,
     .next-quote {
@@ -444,15 +454,19 @@ h1 {
         margin: 10px 0;
     }
     .famous-quotes-section {
-        min-height: 380px;
-        padding: 30px 0;
+        min-height: 400px;
+        padding-top: 50px;
+        padding-bottom: 70px;
+        padding-left: 0;
+        padding-right: 0;
     }
     .quote-carousel-wrapper {
         padding: 0 2px;
+        min-height: 280px;
     }
     .quote-carousel {
         margin: 0 2px;
-        min-height: 220px;
+        min-height: 280px;
     }
     .quote-card {
         padding: 20px;
@@ -469,6 +483,7 @@ h1 {
     }
     .author {
         font-size: 1em;
+        margin-bottom: 10px;
     }
     .prev-quote,
     .next-quote {
