@@ -105,7 +105,6 @@ h1 {
     }
 }
 
-
 .fighter-stats-section {
     position: relative;
     z-index: 2;
@@ -184,6 +183,176 @@ h1 {
     text-decoration: underline;
 }
 
+.famous-quotes-section {
+    position: relative;
+    width: 100%;
+    padding: 60px 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 400px;
+    overflow: hidden;
+}
+
+.famous-quotes-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.quote-carousel-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    min-height: 250px;
+}
+
+.quote-carousel {
+    position: relative;
+    flex-grow: 1;
+    margin: 0 10px;
+    min-height: 250px;
+    width: auto;
+    max-width: 700px;
+}
+
+.quote-card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.7);
+    text-align: left;
+    color: white;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 250px;
+    transition: transform 0.7s ease-in-out, opacity 0.7s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(100%);
+    z-index: 0;
+}
+
+.quote-card.prev-active {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-100%);
+}
+
+.quote-card.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(0);
+    z-index: 1;
+}
+
+.quote-fighter-image {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 3px solid #ffcc00;
+    box-shadow: 0 0 12px rgba(255, 204, 0, 0.6);
+}
+
+.quote {
+    font-size: 1.4em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.author {
+    font-size: 1.1em;
+    font-style: italic;
+    text-align: center;
+    color: #ccc;
+    margin-top: auto;
+}
+
+.prev-quote,
+.next-quote {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2.5em;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 2;
+    padding: 0 10px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+
+.prev-quote:hover,
+.next-quote:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+@media (min-width: 769px) {
+    .fighters-container {
+        gap: 50px;
+    }
+    .quote-card {
+        flex-direction: row;
+        text-align: left;
+        align-items: center;
+        padding: 30px;
+    }
+    .quote-fighter-image {
+        margin-right: 25px;
+        margin-bottom: 0;
+    }
+    .quote {
+        text-align: left;
+        justify-content: flex-start;
+    }
+    .author {
+        text-align: right;
+        margin-top: 0;
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 992px) {
+    .quote-carousel-wrapper {
+        width: 90%;
+        max-width: none;
+        padding: 0 5px;
+    }
+    .quote-carousel {
+        margin: 0 8px;
+    }
+    .prev-quote,
+    .next-quote {
+        font-size: 2.2em;
+        padding: 0 8px;
+    }
+}
+
 @media (max-width: 768px) {
     .content h1 {
         font-size: 2.5em;
@@ -221,6 +390,39 @@ h1 {
         font-size: 2.5em;
         margin: 15px 0;
     }
+    .famous-quotes-section {
+        padding: 40px 0;
+    }
+    .quote-carousel-wrapper {
+        width: 100%;
+        padding: 0 5px;
+        min-height: 250px;
+    }
+    .quote-carousel {
+        margin: 0 5px;
+        min-height: 250px;
+    }
+    .quote-card {
+        padding: 25px;
+    }
+    .quote-fighter-image {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 15px;
+    }
+    .quote {
+        font-size: 1.3em;
+        line-height: 1.5;
+        margin-bottom: 10px;
+    }
+    .author {
+        font-size: 1.05em;
+    }
+    .prev-quote,
+    .next-quote {
+        font-size: 2.2em;
+        padding: 0 5px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -240,5 +442,37 @@ h1 {
     .vs-text {
         font-size: 2em;
         margin: 10px 0;
+    }
+    .famous-quotes-section {
+        min-height: 380px;
+        padding: 30px 0;
+    }
+    .quote-carousel-wrapper {
+        padding: 0 2px;
+    }
+    .quote-carousel {
+        margin: 0 2px;
+        min-height: 220px;
+    }
+    .quote-card {
+        padding: 20px;
+    }
+    .quote-fighter-image {
+        width: 70px;
+        height: 70px;
+        margin: 0 auto 15px;
+    }
+    .quote {
+        font-size: 1.15em;
+        line-height: 1.5;
+        margin-bottom: 10px;
+    }
+    .author {
+        font-size: 1em;
+    }
+    .prev-quote,
+    .next-quote {
+        font-size: 1.8em;
+        padding: 0 2px;
     }
 }
