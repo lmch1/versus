@@ -232,22 +232,21 @@ h1 {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 30px;
-    background-color: rgba(255, 255, 255, 0.15);
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.7);
-    text-align: left;
-    color: white;
-    box-sizing: border-box;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 250px;
+    transform: translateX(100%);
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.7);
+    color: white;
+    box-sizing: border-box;
     transition: transform 0.7s ease-in-out, opacity 0.7s ease-in-out;
     opacity: 0;
     pointer-events: none;
-    transform: translateX(100%);
     z-index: 0;
 }
 
@@ -262,6 +261,12 @@ h1 {
     pointer-events: auto;
     transform: translateX(0);
     z-index: 1;
+}
+
+.quote-card.next-active {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(100%);
 }
 
 .quote-fighter-image {
@@ -299,12 +304,12 @@ h1 {
     background: none;
     border: none;
     color: white;
-    font-size: 2.5em;
+    font-size: 3em;
     cursor: pointer;
     opacity: 0.8;
     transition: opacity 0.3s ease, transform 0.3s ease;
     z-index: 2;
-    padding: 0 10px;
+    padding: 0 15px;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
     flex-shrink: 0;
     flex-grow: 0;
@@ -353,8 +358,8 @@ h1 {
     }
     .prev-quote,
     .next-quote {
-        font-size: 2.2em;
-        padding: 0 8px;
+        font-size: 2.5em;
+        padding: 0 12px;
     }
 }
 
@@ -431,7 +436,7 @@ h1 {
     .prev-quote,
     .next-quote {
         font-size: 2.2em;
-        padding: 0 5px;
+        padding: 0 8px;
     }
 }
 
@@ -488,6 +493,6 @@ h1 {
     .prev-quote,
     .next-quote {
         font-size: 1.8em;
-        padding: 0 2px;
+        padding: 0 5px;
     }
 }
